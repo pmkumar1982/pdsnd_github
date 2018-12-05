@@ -130,6 +130,13 @@ def user_stats(df):
     print('\nCalculating User Stats...\n')
     start_time = time.time()
 
+    # TO DO: Display counts of user types
+    counts_of_user_types = dict(df['User Type'].value_counts())
+    print('Each user type counts from the given bikeshare data:\n')
+    for usertype,count in counts_of_user_types.items():
+        print(usertype,count)
+    print()
+
     # TO DO: Display counts of gender
     print('Gender counts from the given bikeshare data:\n')
     if 'Gender' in df.columns:
